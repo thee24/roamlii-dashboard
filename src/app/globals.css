@@ -1,0 +1,130 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*:root {*/
+/*  --background: #f9fafb; !* Light gray background *!*/
+/*  --foreground: #1f2937; !* Dark gray text *!*/
+/*  --card: #ffffff; !* White card background *!*/
+/*  --card-foreground: #1f2937; !* Dark gray text on cards *!*/
+/*  --popover: #ffffff; !* White popover background *!*/
+/*  --popover-foreground: #1f2937; !* Dark gray text in popovers *!*/
+/*  --primary: #4682b4; !* Blue primary color *!*/
+/*  --primary-foreground: #ffffff; !* White text on primary elements *!*/
+/*  --secondary: #6b7280; !* Gray secondary color *!*/
+/*  --secondary-foreground: #ffffff; !* White text on secondary elements *!*/
+/*  --muted: #f3f4f6; !* Light gray muted background *!*/
+/*  --muted-foreground: #6b7280; !* Gray text for muted elements *!*/
+/*  --accent: #f8fafc; !* Green accent color *!*/
+/*  --accent-foreground: #1f2937; !* White text on accent elements *!*/
+/*  --destructive: #ef4444; !* Red for destructive actions *!*/
+/*  --destructive-foreground: #ffffff; !* White text on destructive elements *!*/
+/*  --border: #e2e8f0; !* Light gray border *!*/
+/*  --input: #ffffff; !* White input fields *!*/
+/*  --ring: #2563eb; !* Blue ring for focus states *!*/
+/*  --radius: 0.5rem; !* Rounded corners *!*/
+/*}*/
+
+:root {
+  --background: #f9fafb;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --card-foreground: #1a1f2b;
+  --popover: #ffffff;
+  --popover-foreground: #1a1f2b;
+  --primary: #4682b4;
+  --primary-foreground: #f4f7fb;
+  --secondary: #4b4a68;
+  --secondary-foreground: #f4f7fb;
+  --tertiary: #ffcb00;
+  --tertiary-foreground: #1a1f2b;
+  --muted: #f2f6f9;
+  --muted-foreground: #6f7785;
+  --accent: #f2f6f9;
+  --accent-foreground: #1a1f2b;
+  --destructive: #ef4444;
+  --destructive-foreground: #f4f7fb;
+  --border: #e4e9f1;
+  --input: #e4e9f1;
+  --ring: #0a0b0e;
+  --radius: 0.5rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1f2b;
+  --sidebar-border: #e4e9f1;
+  --sidebar-accent: #f2f6f9;
+  --sidebar-accent-foreground: #1a1f2b;
+  --sidebar-ring: #0a0b0e;
+}
+
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f4f7fb;
+  --card: #0f172a;
+  --card-foreground: #f4f7fb;
+  --popover: #0f172a;
+  --popover-foreground: #f4f7fb;
+  --primary: #3a8ecf;
+  --primary-foreground: #f4f7fb;
+  --secondary: #4d5261;
+  --secondary-foreground: #f4f7fb;
+  --tertiary: #ffcb00;
+  --tertiary-foreground: #0f172a;
+  --muted: #1c2433;
+  --muted-foreground: #a0a9ba;
+  --accent: #1c2433;
+  --accent-foreground: #f4f7fb;
+  --destructive: #712323;
+  --destructive-foreground: #f4f7fb;
+  --border: #1c2433;
+  --input: #1c2433;
+  --ring: #d6dcef;
+  --sidebar: #0f172a;
+  --sidebar-foreground: #f4f7fb;
+  --sidebar-border: #1c2433;
+  --sidebar-accent: #1c2433;
+  --sidebar-accent-foreground: #f4f7fb;
+  --sidebar-ring: #d6dcef;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
